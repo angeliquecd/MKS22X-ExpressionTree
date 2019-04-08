@@ -7,7 +7,7 @@ public class ExpressionTree{
   /*return the expression as an infix notation string with parenthesis*/
   /* The sample tree would be: "(3 + (2 * 10))"     */
   public String toString(){
-    if (isValue()) return ""+getValue()+" ";
+    if (isValue()) return ""+getValue();
     return "("+getLeft().toString()+" "+getOp()+" "+getRight().toString()+")";
   }
 
@@ -23,7 +23,7 @@ public class ExpressionTree{
 
   public String toStringPrefix(){
   if (isValue()) return ""+getValue()+" ";
-  return getOp()+getLeft().toStringPrefix()+getRight().toStringPrefix();
+  return getOp()+" "+getLeft().toStringPrefix()+getRight().toStringPrefix();
   }
 
 
